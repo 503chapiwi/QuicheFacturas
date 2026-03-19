@@ -124,14 +124,27 @@ if st.button("INICIAR PROCESO") and uploaded_pdfs and uploaded_xlsx:
 
         # 2. MASTER MUNICIPALITY DICTIONARY
         MUNICIPIOS = {
-            1: {"nombre_oficial": "Totonicapán", "alias_pdf": ["totonicapan totonicapan", "totonicapan, totonicapan", "totonicapan"]},
-            2: {"nombre_oficial": "San Cristóbal Totonicapán", "alias_pdf": ["san cristobal totonicapan", "san cristobal"]},
-            3: {"nombre_oficial": "San Francisco El Alto", "alias_pdf": ["san francisco el alto", "san francisco"]},
-            4: {"nombre_oficial": "San Andrés Xecul", "alias_pdf": ["san andres xecul", "san andres"]},
-            5: {"nombre_oficial": "Momostenango", "alias_pdf": ["momostenango"]},
-            6: {"nombre_oficial": "Santa María Chiquimula", "alias_pdf": ["santa maria chiquimula", "sta maria chiquimula", "santa maria", "sta maria"]},
-            7: {"nombre_oficial": "Santa Lucía La Reforma", "alias_pdf": ["santa lucia la reforma", "sta lucia la reforma", "santa lucia", "sta lucia"]},
-            8: {"nombre_oficial": "San Bartolo Aguas Calientes", "alias_pdf": ["san bartolo aguas calientes", "san bartolo"]}
+            1: {"nombre_oficial": "Canilla"},
+            2: {"nombre_oficial": "Chajul"},
+            3: {"nombre_oficial": "Chicaman"},
+            4: {"nombre_oficial": "Chiche"},
+            5: {"nombre_oficial": "Chinique"},
+            6: {"nombre_oficial": "Cunen"},
+            7: {"nombre_oficial": "Ixcan"},
+            8: {"nombre_oficial": "Joyabaj"},
+            9: {"nombre_oficial": "Nebaj"},
+            10: {"nombre_oficial": "Pachalum"},
+            11: {"nombre_oficial": "Patzite"},
+            12: {"nombre_oficial": "Sacapulas"},
+            13: {"nombre_oficial": "San Andres Sajcabaja"},
+            14: {"nombre_oficial": "San Antonio Ilotenango"},
+            15: {"nombre_oficial": "San Bartolome Jocotenango"},
+            16: {"nombre_oficial": "San Juan Cotzal"},
+            17: {"nombre_oficial": "San Miguel Uspantan"},
+            18: {"nombre_oficial": "San Pedro Jocopilas"},
+            19: {"nombre_oficial": "Santa Cruz Del Quiche"},
+            20: {"nombre_oficial": "Santo Tomas Chichicastenango"},
+            21: {"nombre_oficial": "Zacualpa"},
         }
         
         search_list = []
@@ -144,8 +157,12 @@ if st.button("INICIAR PROCESO") and uploaded_pdfs and uploaded_xlsx:
         search_list.sort(key=lambda x: (x[1] == 1, -len(x[0])))
 
         EXCEL_MAPPINGS = {
-            1: "totonicapán", 2: "san cristobal", 3: "san francisco", 4: "san andres",
-            5: "momostenango", 6: "santa maria", 7: "santa lucia", 8: "san bartolo"
+            1: "Canilla", 2: "Chajul", 3: "Chicaman", 4: "Chiche", 5: "Chinique", 
+            6: "Cunen", 7: "Ixcan", 8: "Joyabaj", 9: "Nebaj", 
+            10: "Pachalum", 11: "Patzite", 12: "Sacapulas", 13: "San Andres Sajcabaja", 
+            14: "San Antonio Ilotenango", 15: "San Bartolome Jocotenango", 16: "San Juan Cotzal", 
+            17: "San Miguel Uspantan", 18: "San Pedro Jocopilas", 19: "Santa Cruz Del Quiche", 
+            20: "Santo Tomas Chichicastenango", 21: "Zacualpa", 
         }
 
         # 3. Map Excel Rows to Municipalities
